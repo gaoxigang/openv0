@@ -1,7 +1,7 @@
 {
   "build": {
     "env": {
-      "OPENAI_KEY": "@openai-key"
+      "OPENAI_KEY": "@openai_key"
     },
     "commands": [
       { "src": "/server/api.js", "use": "@vercel/node" },
