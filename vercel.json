@@ -2,12 +2,12 @@
   "build": {
     "env": {
       "OPENAI_KEY": "@openai_key"
-    },
-    "commands": [
-      { "src": "/server/api.js", "use": "@vercel/node" },
-      { "src": "/webapp/package.json", "use": "@vercel/static-build" }
-    ]
+    }
   },
+  "builds": [
+    { "src": "/server/api.js", "use": "@vercel/node" },
+    { "src": "/webapp/package.json", "use": "@vercel/static-build" }
+  ],
   "routes": [
     { "src": "/(.*)", "dest": "/webapp/$1" }
   ]
